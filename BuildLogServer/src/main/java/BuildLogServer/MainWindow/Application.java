@@ -9,81 +9,16 @@ import javafx.stage.Stage;
 
 public class Application extends javafx.application.Application {
 	
-	/*
-	 * 
-	static public class BuildRow {
-
-		public int id;
-		public String machine;
-		public String workspace;
-		public String command;
-		public String status;
-		
-		public BuildRow(int id, String machine, String workspace, String command, String status) {
-			super();
-			this.id = id;
-			this.machine = machine;
-			this.workspace = workspace;
-			this.command = command;
-			this.status = status;
-		}
-	
-		
-	}
-	
-	
-	static public class Root extends AnchorPane implements Initializable  {
-		
-		@FXML
-        public TableView<BuildRow> buildList;
-
-		@Override
-		public void initialize(URL location, ResourceBundle resources) {
-		}
-		
-	}
-	
-		
-			
-			
-			 * 
-			 * List<String> columns = new ArrayList<String>();
-    columns.add("col1");
-    columns.add("col2");
-    TableColumn [] tableColumns = new TableColumn[columns.size()];     
-    int columnIndex = 0;
-    for(int i=0 ; i<columns.size(); i++) {
-        final int j = i;
-        TableColumn col = new TableColumn(columns.get(i));
-        col.setCellValueFactory(new Callback<CellDataFeatures<ObservableList,String>,ObservableValue<String>>(){                   
-           public ObservableValue<String> call(CellDataFeatures<ObservableList, String> param) {                                                                                             
-                return new SimpleStringProperty(param.getValue().get(j).toString());                       
-            }                   
-        });
-        tableView.getColumns().addAll(col);
-    }       
-    ObservableList<String> row = FXCollections.observableArrayList();
-    ObservableList<String> row1 = FXCollections.observableArrayList();
-    row.addAll("d1");
-    row.addAll("d11");
-    row1.addAll("d2");
-    row1.addAll("d22");
-    tableView.getItems().add(row);
-    tableView.getItems().add(row1);
-    }    
-
-			 */
-		
-	
 	@Override
 	public void start(Stage stage) throws Exception {
 		
 		URL location = getClass().getResource("MainWindow.fxml");
 		
 		Parent root = FXMLLoader.load(location);
-		stage.setTitle("Registration Form FXML Application");
+		stage.setTitle("Build Log Server");
 		stage.setScene(new Scene(root, 800, 500));
-		
+		stage.setMinWidth(800);
+		stage.setMinHeight(300);
 		stage.show();
 		
 		/*

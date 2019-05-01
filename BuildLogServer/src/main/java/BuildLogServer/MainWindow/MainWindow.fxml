@@ -8,16 +8,18 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="444.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BuildLogServer.MainWindow.Controller">
-   <children>
-      <TableView fx:id="buildListTableView" prefHeight="211.0" prefWidth="203.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-        <columns>
-          <TableColumn fx:id="columnID" prefWidth="30.0" text="ID" />
-          <TableColumn fx:id="columnMachine" prefWidth="62.0" text="Machine" />
-          <TableColumn fx:id="columnWorkspace" prefWidth="127.0" text="Workspace" />
-          <TableColumn fx:id="columnCommand" prefWidth="103.0" text="Command" />
-          <TableColumn fx:id="columnStatus" prefWidth="53.0" text="Status" />
-        </columns>
-      </TableView>
-   </children>
-</AnchorPane>
+
+<SplitPane fx:id="splitPane" dividerPositions="0.36808846761453395" prefHeight="446.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BuildLogServer.MainWindow.Controller">
+   <items>
+      <ListView fx:id="buildListView" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="250.0" />
+      <ScrollPane prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="312.0">
+               <children>
+                  <ListView fx:id="buildLogListView" layoutX="36.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </items>
+</SplitPane>
